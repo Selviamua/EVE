@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>李嘉烁的个人简历</title>
+    <!-- 替换为你的favicon图标路径 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <!-- 引入Google Fonts (Montserrat, Noto Sans SC, Inter) 用于标题和正文 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Noto+Sans+SC:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标库 (用于电话、邮件等图标) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 全局样式定义 */
+        :root {
+            --primary-pink: #F8BBD0; /* 主浅粉色 */
+            --light-pink: #FCE4EC; /* 更浅的粉色，用于背景 */
+            --dark-pink: #E91E63;  /* 较深的粉色，用于强调和标题 */
+            --text-gray: #424242;  /* 主要文本颜色 */
+            --light-gray: #BDBDBD; /* 辅助文本颜色/边框 */
+            --white: #FFFFFF;      /* 白色 */
+            --section-padding: 80px 0; /* 各版块上下内边距 */
+            --inter-font: 'Inter', sans-serif; /* 新增Inter字体变量 */
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* 字体设置 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* 盒模型设置为边框盒 */
+            line-height: 1.6; /* 行高 */
+            color: var(--text-gray); /* 文本颜色 */
+            scroll-behavior: smooth; /* 页面滚动行为平滑 */
+            background-color: var(--white); /* 页面背景色 */
+        }
+
+        /* 标题通用样式 */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif; /* 标题字体 */
+            color: var(--dark-pink); /* 标题颜色 */
+            margin-bottom: 20px; /* 标题下边距 */
+        }
+
+        /* 链接通用样式 */
+        a {
+            text-decoration: none; /* 移除下划线 */
+            color: var(--dark-pink); /* 链接颜色 */
+            transition: color 0.3s ease; /* 颜色过渡效果 */
+        }
+
+        a:hover {
+            color: var(--primary-pink); /* 鼠标悬停时颜色变化 */
+        }
+
+        /* 容器样式，限制内容最大宽度并居中 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; /* 左右内边距 */
+        }
+
+        /* 各版块通用样式 */
+        section {
+            padding: var(--section-padding);
+            text-align: center; /* 默认居中对齐 */
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: var(--light-pink); /* 导航栏背景色 */
+            padding: 15px 0;
+            position: sticky; /* 粘性定位，滚动时固定在顶部 */
+            top: 0;
+            z-index: 1000; /* 确保在其他内容之上 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* 底部阴影 */
+        }
+
+        .navbar .container {
+            display: flex; /* 弹性布局 */
+            justify-content: space-between; /* 子元素两端对齐 */
+            align-items: center; /* 垂直居中 */
+        }
+
+        .navbar-brand {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: var(--dark-pink); /* 品牌名称颜色 */
+        }
+
+        .navbar-nav {
+            list-style: none; /* 移除列表点 */
+            margin: 0;
+            padding: 0;
+            display: flex; /* 弹性布局 */
+        }
+
+        .navbar-nav li {
+            margin-left: 30px; /* 导航项之间间距 */
+        }
+
+        .navbar-nav a {
+            font-size: 1.1em;
+            color: var(--text-gray); /* 导航链接颜色 */
+            padding: 5px 0;
+            position: relative; /* 用于下划线动画 */
+        }
+
+        /* 导航链接下划线动画效果 */
+        .navbar-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--dark-pink);
+            transition: width 0.3s ease;
+        }
+
+        .navbar-nav a:hover::after {
+            width: 100%; /* 鼠标悬停时下划线展开 */
+        }
+
+        /* 首页 (Hero Section) 样式 */
+        #hero {
+            background-color: var(--white); /* 背景色 */
+            min-height: 100vh; /* 最小高度为视口高度 */
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+            flex-direction: column; /* 垂直排列 */
+            text-align: center;
+            padding: 0 20px; /* 确保移动端也有内边距 */
+        }
+
+        #hero h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            color: var(--dark-pink);
+        }
+
+        #hero h2 {
+            font-size: 1.8em;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            color: var(--text-gray);
+            max-width: 600px; /* 限制段落宽度 */
+            margin-bottom: 40px;
+        }
+
+        /* 主要按钮样式 */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--dark-pink); /* 按钮背景色 */
+            color: var(--white); /* 按钮文本颜色 */
+            padding: 15px 30px;
+            border-radius: 30px; /* 圆角 */
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* 颜色和形变过渡 */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 按钮阴影 */
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-pink); /* 鼠标悬停时背景色变化 */
+            transform: translateY(-2px); /* 鼠标悬停时上移 */
+        }
+
+        /* 关于我 (About Me) 版块样式 */
+        #about {
+            background-color: var(--light-pink); /* 背景色 */
+            padding: var(--section-padding);
+            text-align: left; /* 文本左对齐 */
+        }
+
+        #about .container {
+            display: flex;
+            flex-wrap: wrap; /* 允许子元素换行 */
+            gap: 40px; /* 子元素间距 */
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+
+        .about-content {
+            flex: 2; /* 弹性伸缩，占据更多空间 */
+            min-width: 300px; /* 最小宽度 */
+            margin: 0 auto; /* 居中 */
+            max-width: 800px; /* 限制内容宽度 */
+        }
+
+        #about h2 {
+            text-align: center; /* 版块标题居中 */
+            margin-bottom: 40px;
+        }
+        
+        .about-content h3 {
+            color: var(--primary-pink); /* 小标题颜色 */
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .about-info p {
+            margin-bottom: 5px;
+        }
+
+        .about-info strong {
+            color: var(--dark-pink); /* 强调文本颜色 */
+        }
+
+        /* 行业洞察版块 */
+        #industry-insight {
+            background-color: var(--white);
+            padding: var(--section-padding);
+            text-align: left;
+        }
+
+        #industry-insight .container {
+            max-width: 1200px; /* 调整为更宽的容器 */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #industry-insight h2 {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #industry-insight h3 {
+            color: var(--primary-pink);
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        #industry-insight p {
+            margin-bottom: 15px;
+        }
+
+        /* 新增行业洞察内容样式 */
+        .industry-header {
+            background: linear-gradient(to right, var(--dark-pink), var(--primary-pink)); /* 粉色渐变 */
+            color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-bottom-left-radius: 1.5rem;
+            border-bottom-right-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem; /* 调整与下方内容的间距 */
+        }
+        .industry-header h1 {
+            font-size: 2.25rem; /* text-4xl */
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: var(--white); /* 确保标题在深色背景上是白色 */
+        }
+        .industry-header p {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 300; /* font-light */
+            max-width: 48rem; /* max-w-3xl */
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--white); /* 确保文本在深色背景上是白色 */
+        }
+        @media (min-width: 768px) {
+            .industry-header h1 {
+                font-size: 3rem; /* md:text-5xl */
+            }
+            .industry-header p {
+                font-size: 1.25rem; /* md:text-xl */
+            }
+        }
+
+        .main-content-industry {
+            max-width: 80rem; /* max-w-7xl */
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem; /* p-4 */
+        }
+        @media (min-width: 768px) {
+            .main-content-industry {
+                padding: 2rem; /* md:p-8 */
+            }
+        }
+
+        .section-industry {
+            margin-bottom: 3rem; /* mb-12 */
+        }
+        .section-industry h2 {
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0.5rem; /* mb-2 */
+            color: var(--dark-pink); /* text-[#0052D4] */
+        }
+        .section-industry > p { /* 直接子P标签 */
+            text-align: center;
+            color: var(--text-gray); /* text-gray-600 */
+            margin-bottom: 2rem; /* mb-8 */
+            max-width: 42rem; /* max-w-2xl */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* grid-cols-1 */
+            gap: 1.5rem; /* gap-6 */
+        }
+        @media (min-width: 768px) {
+            .kpi-grid {
+                grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+            }
+        }
+
+        .kpi-card {
+            background-color: var(--white);
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+        }
+        .kpi-card-border-primary { border-left: 4px solid var(--dark-pink); } /* border-[#0052D4] */
+        .kpi-card-border-secondary { border-left: 4px solid var(--primary-pink); } /* border-[#6A82FB] */
+        .kpi-card-border-neutral { border-left: 4px solid var(--light-pink); } /* border-[#93B5C6] */
+
+        .kpi-card h3 {
+            color: var(--text-gray); /* text-gray-500 */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500; /* font-medium */
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .kpi-card p:first-of-type { /* 5亿+ */
+            font-size: 3rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: var(--dark-pink); /* text-[#0052D4] */
+        }
+        .kpi-card p:nth-of-type(2) { /* 复合年增长率 */
+            color: var(--text-gray); /* text-gray-500 */
+            margin-top: 0.5rem; /* mt-2 */
+        }
+        /* Specific KPI colors */
+        .kpi-card.kpi-card-border-primary p:first-of-type { color: var(--dark-pink); }
+        .kpi-card.kpi-card-border-secondary p:first-of-type { color: var(--primary-pink); }
+        .kpi-card.kpi-card-border-neutral p:first-of-type { color: var(--light-pink); }
+
+
+        .chart-box {
+            background-color: var(--white);
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            padding: 1.5rem; /* p-6 */
+            margin-top: 2rem; /* mt-8 */
+        }
+        .chart-box h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .chart-box p {
+            text-align: center;
+            color: var(--text-gray); /* text-gray-600 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px; /* Fixed height for charts */
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .comp-user-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* grid-cols-1 */
+            gap: 2rem; /* gap-8 */
+        }
+        @media (min-width: 768px) {
+            .comp-user-grid {
+                grid-template-columns: repeat(2, 1fr); /* md:grid-cols-2 */
+            }
+        }
+
+        /* Flow steps for EVE workflow */
+        .flow-container {
+            background-color: var(--white);
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            padding: 2rem; /* p-8 */
+        }
+        .flow-steps-wrapper {
+            display: flex;
+            flex-direction: column; /* flex-col */
+            align-items: center;
+            justify-content: center;
+            gap: 1rem; /* space-y-4 */
+        }
+        @media (min-width: 768px) {
+            .flow-steps-wrapper {
+                flex-direction: row; /* md:flex-row */
+                gap: 1rem; /* md:space-x-4 */
+                margin-top: 0; /* md:space-y-0 */
+            }
+        }
+
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .flow-icon {
+            flex-shrink: 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+        .flow-icon-1 { background-color: var(--dark-pink); } /* bg-[#0052D4] */
+        .flow-icon-2 { background-color: var(--primary-pink); } /* bg-[#4364F7] */
+        .flow-icon-3 { background-color: var(--primary-pink); } /* bg-[#6A82FB] */
+        .flow-icon-4 { background-color: var(--light-pink); } /* bg-[#93B5C6] */
+
+        .flow-step h4 {
+            font-weight: 600; /* font-semibold */
+            margin-top: 0.5rem; /* mt-2 */
+            color: var(--text-gray);
+        }
+        .flow-step p {
+            font-size: 0.875rem; /* text-sm */
+            color: var(--text-gray); /* text-gray-600 */
+        }
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid var(--dark-pink); /* Cool Gray 700 */
+            margin: 0 1rem;
+        }
+        .arrow-right.hidden-md {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .arrow-right.hidden-md {
+                display: block;
+            }
+        }
+
+        /* R&D Focus Areas */
+        .rd-focus-list {
+            list-style: none; /* space-y-3 */
+            padding: 0;
+            margin: 0;
+            margin-top: 0.75rem;
+        }
+        .rd-focus-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+        .rd-focus-list li:last-child {
+            margin-bottom: 0;
+        }
+        .rd-focus-bullet {
+            display: inline-block;
+            width: 0.75rem; /* w-3 */
+            height: 0.75rem; /* h-3 */
+            border-radius: 9999px; /* rounded-full */
+            margin-right: 0.75rem; /* mr-3 */
+        }
+        /* Specific bullet colors */
+        .bullet-1 { background-color: var(--dark-pink); } /* bg-[#0052D4] */
+        .bullet-2 { background-color: var(--primary-pink); } /* bg-[#4364F7] */
+        .bullet-3 { background-color: var(--primary-pink); } /* bg-[#6A82FB] */
+        .bullet-4 { background-color: var(--light-pink); } /* bg-[#93B5C6] */
+        .bullet-5 { background-color: var(--light-pink); } /* bg-[#BDD5EA] */
+
+
+        /* 个人匹配度版块 */
+        #self-match-introduction {
+            background-color: var(--light-pink);
+            padding: var(--section-padding);
+            text-align: left;
+        }
+
+        #self-match-introduction .container {
+            max-width: 800px; /* 限制内容宽度 */
+            margin: 0 auto; /* 居中 */
+        }
+
+        #self-match-introduction h2 {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        #self-match-introduction p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+
+        /* 项目经验 (Projects) 版块样式 */
+        #projects {
+            background-color: var(--white); /* 背景色 */
+            padding: var(--section-padding);
+        }
+
+        #projects h2 {
+            margin-bottom: 50px;
+        }
+
+        .project-grid {
+            display: grid; /* 网格布局 */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 响应式网格列 */
+            gap: 30px; /* 网格间距 */
+        }
+
+        .project-card {
+            background-color: var(--white);
+            border-radius: 10px; /* 圆角 */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 阴影 */
+            padding: 25px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 过渡效果 */
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px); /* 鼠标悬停时上移 */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* 鼠标悬停时阴影加深 */
+        }
+
+        .project-card h3 {
+            font-size: 1.4em;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--dark-pink);
+        }
+
+        .project-card .time-frame {
+            font-size: 0.9em;
+            color: var(--light-gray);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .project-card p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+
+        .project-card .keywords {
+            font-size: 0.85em;
+            color: var(--primary-pink);
+            font-weight: bold;
+        }
+
+        /* 技能 (Skills) 版块样式 */
+        #skills {
+            background-color: var(--light-pink); /* 背景色 */
+            padding: var(--section-padding);
+        }
+
+        #skills h2 {
+            margin-bottom: 50px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            text-align: left;
+        }
+
+        .skill-category {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            padding: 25px;
+            position: relative;
+        }
+
+        .skill-category h3 {
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--primary-pink);
+            border-bottom: 2px solid var(--primary-pink); /* 底部边框 */
+            padding-bottom: 10px;
+        }
+
+        .skill-category p {
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        /* 技能标签样式 */
+        .skill-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background-color: var(--primary-pink);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            white-space: nowrap; /* 防止标签文本换行 */
+        }
+
+        /* 荣誉奖项 (Awards) 版块样式 */
+        #awards {
+            background-color: var(--white); /* 背景色 */
+            padding: var(--section-padding);
+        }
+
+        #awards h2 {
+            margin-bottom: 50px;
+        }
+
+        .award-list {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .award-item {
+            background-color: var(--white);
+            border-left: 4px solid var(--primary-pink); /* 左侧强调边框 */
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 阴影 */
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .award-item:last-child {
+            margin-bottom: 0; /* 最后一个奖项移除下边距 */
+        }
+
+        .award-item h3 {
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: var(--dark-pink);
+        }
+
+        .award-item .award-meta {
+            font-size: 0.9em;
+            color: var(--light-gray);
+            margin-bottom: 10px;
+        }
+
+        .award-item p {
+            font-size: 0.95em;
+        }
+
+        /* 联系我 (Contact) 版块样式 */
+        #contact {
+            background-color: var(--light-pink); /* 背景色 */
+            padding: var(--section-padding);
+        }
+
+        #contact h2 {
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column; /* 垂直排列 */
+            align-items: center; /* 水平居中 */
+            gap: 20px; /* 元素间距 */
+            font-size: 1.1em;
+        }
+
+        .contact-info p {
+            margin: 0;
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            gap: 10px; /* 图标和文本间距 */
+        }
+
+        .contact-info p i {
+            color: var(--dark-pink); /* 图标颜色 */
+            font-size: 1.4em;
+        }
+
+        /* 底部 (Footer) 样式 */
+        footer {
+            background-color: var(--dark-pink); /* 底部背景色 */
+            color: var(--white); /* 文本颜色 */
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column; /* 导航栏在小屏幕上垂直排列 */
+            }
+            .navbar-nav {
+                margin-top: 15px;
+                flex-wrap: wrap; /* 导航项允许换行 */
+                justify-content: center;
+            }
+            .navbar-nav li {
+                margin: 0 15px 10px; /* 调整导航项间距 */
+            }
+
+            #hero h1 {
+                font-size: 3em; /* 调整标题大小 */
+            }
+            #hero h2 {
+                font-size: 1.5em; /* 调整副标题大小 */
+            }
+
+            #about .container {
+                flex-direction: column; /* 关于我版块在小屏幕上垂直排列 */
+            }
+            .about-content {
+                min-width: unset; /* 取消最小宽度限制 */
+                width: 100%; /* 占满宽度 */
+            }
+            .about-content h2 {
+                text-align: center;
+            }
+
+            .project-grid, .skills-grid {
+                grid-template-columns: 1fr; /* 项目和技能版块在小屏幕上单列布局 */
+            }
+
+            .skill-category, .project-card, .award-item {
+                padding: 20px; /* 调整卡片内边距 */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+            #hero h2 {
+                font-size: 1.2em;
+            }
+            .btn-primary {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .navbar-nav li {
+                margin: 0 10px 5px;
+            }
+            section {
+                padding: 60px 0; /* 调整版块内边距 */
+            }
+            .container {
+                padding: 0 15px; /* 调整容器内边距 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-brand">李嘉烁的个人简历</div>
+            <nav>
+                <ul class="navbar-nav">
+                    <li><a href="#about">关于我</a></li>
+                    <li><a href="#projects">项目经验</a></li>
+                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#awards">荣誉奖项</a></li>
+                    <li><a href="#industry-insight">行业洞察</a></li> 
+                    <li><a href="#self-match-introduction">个人匹配度</a></li> 
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首页介绍 -->
+    <section id="hero">
+        <h1>李嘉烁</h1>
+        <h2>AI产品经理/运营</h2>
+        <p>我关注用户情感体验，善于洞察用户行为背后的情感需求，并致力于打造更具共情力的产品。</p>
+        <a href="#about" class="btn-primary">查看完整简历</a>
+    </section>
+
+    <!-- 关于我版块 -->
+    <section id="about">
+        <div class="container">
+            <h2 style="width: 100%;">关于我</h2>
+            <div class="about-content">
+                <p>我具备较强的技术理解力与数据分析能力，熟悉AI大模型技术原理与AIGC前沿趋势。我深入体验并分析了多款主流AI产品，并有操作和管理智能体的经验。我高度关注用户情感体验，善于洞察用户行为背后的情感需求，并能初步区分不同情感互动场景，致力于打造更具共情力的产品。我深信AI陪伴产品在未来社会中的巨大价值，渴望投身于AI情感交互领域，共同探索其无限可能。</p>
+                
+                <h3>基本信息</h3>
+                <div class="about-info">
+                    <p><i class="fas fa-phone-alt"></i> 电话: 17362281906</p>
+                    <p><i class="fas fa-envelope"></i> 邮箱: 212144787@qq.com</p>
+                    <p><i class="fas fa-user"></i> 年龄: 21岁</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 所在地: 深圳 (可以随时到岗)</p>
+                </div>
+
+                <h3>教育经历</h3>
+                <p><strong>青岛科技大学</strong> | 本科 | 合成生物学 | GPA 3.05 | 2023.9-2027.6</p>
+                <p>主修课程: 概率论与数理统计-81, 大学计算机基础-87, 高等数学-82, 线性代数-74, Python程序设计-84。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经验版块 -->
+    <section id="projects">
+        <div class="container">
+            <h2>项目经验</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>二次元陪伴聊天机器人</h3>
+                    <span class="time-frame">2025.6</span>
+                    <p>基于Coze平台，对“支配恶魔”智能体模板进行功能与性能优化，构建面向2C端虚拟角色及情感陪聊场景的完整工作流。通过分析用户情感需求并迭代优化，实现了固定伴侣人设，以提供持续稳定的情感支持和交互体验。此项目旨在探索AI在情感陪伴领域的潜力，并初步识别了用户高频情感表达及需求类型，为智能体的交互逻辑提供了数据支持。</p>
+                    <span class="keywords">关键词：Coze扣子, Agent, 工作流</span>
+                </div>
+                <div class="project-card">
+                    <h3>合成生物学竞赛蛋白设计赛</h3>
+                    <span class="time-frame">2025.5-2025.6</span>
+                    <p>本项目利用人工智能技术设计具备高亮度和热稳定性的新型荧光蛋白。利用预训练蛋白质语言模型ESM将荧光蛋白序列编码为高维特征向量，并基于序列-荧光强度数据集构建XGBoost回归模型，实现蛋白质亮度的精准预测，过程中涉及对数据进行清洗、预处理和特征工程。</p>
+                    <span class="keywords">关键词：人工智能辅助蛋白质设计, XGBoost回归预测, ESM语言模型</span>
+                </div>
+                <div class="project-card">
+                    <h3>Foundations-of-LLMs</h3>
+                    <span class="time-frame">2025.5-2025.6</span>
+                    <p>通过自学Github上浙江大学的大模型基础课程，深入理解了传统语言模型、大语言模型架构演化、Prompt工程、参数高效微调(PEFT)、模型编辑、检索增强生成(RAG)等技术。</p>
+                    <span class="keywords">关键词：大模型, RAG, Prompt工程, 参数高效微调(PEFT), 模型编辑</span>
+                </div>
+                <div class="project-card">
+                    <h3>旅游出行规划助手</h3>
+                    <span class="time-frame">2025.6-2025.7</span>
+                    <p>基于CAMEL框架和Handy Multi-Agent教程，学习并复现了一个模块化的旅游出行规划助手的构建过程。系统采用多智能体协作设计，包含用户意图识别、旅游信息检索、攻略生成和反馈优化等核心模块，支持从需求收集到个性化行程推荐的全流程自动化。在设计用户交互界面时，考虑到用户在旅行规划过程中可能出现的焦虑、期待等情绪，通过清晰的引导和个性化推荐，尝试提升用户的情感体验和满意度。</p>
+                    <span class="keywords">关键词：多智能体, 情感体验, 旅行规划</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能版块 -->
+    <section id="skills">
+        <div class="container">
+            <h2>技能</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>编程语言</h3>
+                    <p><strong>Python</strong>: 熟练运用Python进行数据处理，曾使用 Pandas 库对一份包含数万行数据的公开数据集进行数据清洗、缺失值处理和特征提取，并利用 Matplotlib 完成了多维度的数据可视化。</p>
+                </div>
+                <div class="skill-category">
+                    <h3>数据分析与建模</h3>
+                    <p>具备数据清洗、缺失值处理、特征提取及多维度数据可视化能力。曾利用XGBoost回归模型实现蛋白质亮度的精准预测，具备构建数据模型和进行预测分析的经验。</p>
+                </div>
+                <div class="skill-category">
+                    <h3>产品设计与数据驱动</h3>
+                    <p>具备良好产品意识，熟悉用户分析和产品规划工具及方法。理解数据驱动的产品迭代逻辑，在项目实践中注重从数据中发现问题并验证解决方案。</p>
+                    <div class="skill-tags">
+                        <span class="tag">原型设计</span>
+                        <span class="tag">PRD撰写</span>
+                        <span class="tag">竞品分析</span>
+                        <span class="tag">用户画像</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI领域趋势与竞品分析</h3>
+                    <p>关注AI技术前沿和行业趋势，体验最新的AI应用。追读Alpha News的AI与前沿科技突破。</p>
+                    <div class="skill-tags">
+                        <span class="tag">竞品分析</span>
+                        <span class="tag">市场调研</span>
+                        <span class="tag">技术趋势</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>软件办公</h3>
+                    <p>熟练使用xmind、墨刀、word、excel、ppt等常用软件。</p>
+                </div>
+                <div class="skill-category">
+                    <h3>语言能力</h3>
+                    <p><strong>英语</strong>: CET-4, 流畅浏览英语网站。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉奖项版块 -->
+    <section id="awards">
+        <div class="container">
+            <h2>荣誉奖项</h2>
+            <div class="award-list">
+                <div class="award-item">
+                    <h3>全国大学生数学建模竞赛山东省二等奖</h3>
+                    <div class="award-meta">中国工业与应用数学学会 | 2024.10</div>
+                    <p>主导开发了电子制造"成本-质量-利润"优化决策系统，通过建立0-1整数规划模型并实施分层求解策略；创新性引入关系系数并通过灵敏度分析验证方案鲁棒性，量化真实次品率波动对决策稳定性的影响。</p>
+                </div>
+                <div class="award-item">
+                    <h3>中国合成生物学竞赛银奖</h3>
+                    <div class="award-meta">中国生物工程学会合成生物学分会 | 2024.8</div>
+                </div>
+                <div class="award-item">
+                    <h3>美国大学生数学建模竞赛S奖(国际三等奖)</h3>
+                    <div class="award-meta">美国数学及其应用联合会 | 2025.2</div>
+                    <p>基于历年各国奥运奖牌数据预测2027年洛杉矶奥运会奖牌数据。运用指数平滑法和多元线性回归模型实现奖牌数预测，并通过均方误差与单变量敏感性分析评估结果。创新性运用时间序列分析识别异常数据点，量化并验证教练指导等因素对夺牌结果的影响。</p>
+                </div>
+                <div class="award-item">
+                    <h3>校内三等奖学金</h3>
+                    <div class="award-meta"></div> <!-- 奖学金通常没有外部机构和具体日期，可留空或移除 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业洞察版块 -->
+    <section id="industry-insight">
+        <div class="container">
+            <header class="industry-header">
+                <h1>深度分析：3D AI产品革命</h1>
+                <p>针对AI原生3D创作平台的行业分析与战略展望，聚焦EVE项目机遇。</p>
+            </header>
+
+            <main class="main-content-industry">
+
+                <!-- Section 1: Market Overview -->
+                <section class="section-industry">
+                    <h2 class="text-center mb-2">3D内容市场爆发式增长</h2>
+                    <p>元宇宙、游戏、AR/VR和电子商务的推动下，3D内容需求飙升。AI有望实现创作民主化，将其从专业技能转变为普遍可用的工具。</p>
+
+                    <div class="kpi-grid">
+                        <!-- KPI Card 1: Market Size -->
+                        <div class="kpi-card kpi-card-border-primary">
+                            <h3>全球3D内容市场规模 (2025年预测)</h3>
+                            <p>$250亿</p>
+                            <p>复合年增长率15.8%</p>
+                        </div>
+                        <!-- KPI Card 2: AI Impact -->
+                        <div class="kpi-card kpi-card-border-secondary">
+                            <h3>AI工具带来的生产力提升</h3>
+                            <p>10倍+</p>
+                            <p>创作时间大幅缩短</p>
+                        </div>
+                        <!-- KPI Card 3: Creator Economy -->
+                        <div class="kpi-card kpi-card-border-neutral">
+                            <h3>潜在用户群</h3>
+                            <p>5亿+</p>
+                            <p>游戏玩家、社交媒体用户和爱好者</p>
+                        </div>
+                    </div>
+
+                    <!-- Market Growth Chart -->
+                    <div class="chart-box">
+                        <h3>市场增长预测 (单位：十亿美元)</h3>
+                        <p>此图表展示了全球3D内容市场的强劲持续增长预测，突显了EVE等创新平台的巨大机遇。</p>
+                        <div class="chart-container">
+                            <canvas id="marketGrowthChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 2: Competitive Landscape -->
+                <section class="section-industry">
+                    <h2 class="text-center mb-2">竞争格局</h2>
+                    <p>市场中既有成熟企业，也有敏捷的初创公司。EVE的独特卖点将是其AI原生方法，专注于为非专业用户提供直观的文本到3D生成功能。</p>
+                    <div class="comp-user-grid">
+                        <div class="chart-box">
+                            <h3>主要竞争对手功能对比</h3>
+                            <p>此对比突显了EVE的战略重点。虽然现有公司提供强大但复杂的工具，但EVE瞄准的是那些优先考虑速度和易用性而非精细控制的创作者市场。</p>
+                            <div class="chart-container" style="height: 380px;">
+                                <canvas id="competitorRadarChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <h3>目标用户细分</h3>
+                            <p>此甜甜圈图显示了EVE可以捕获的主要用户细分。最大的机会在于需要快速获取资产的社交媒体创作者和独立游戏开发者。</p>
+                            <div class="chart-container" style="height: 380px;">
+                                <canvas id="userSegmentsChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Section 3: The EVE Product Workflow -->
+                <section class="section-industry">
+                    <h2 class="text-center mb-2">EVE优势：AI优先的工作流程</h2>
+                    <p>EVE的核心创新在于简化3D创作流程。此流程图展示了用户旅程，并将其与传统方法的复杂多软件流程进行对比。</p>
+                    <div class="flow-container">
+                        <div class="flow-steps-wrapper">
+                            <!-- Step 1 -->
+                            <div class="flow-step">
+                                <div class="flow-icon flow-icon-1">1</div>
+                                <h4>构思与提示</h4>
+                                <p>用户用自然语言描述所需的3D模型。</p>
+                            </div>
+                            <div class="arrow-right hidden-md"></div>
+                            <!-- Step 2 -->
+                            <div class="flow-step">
+                                <div class="flow-icon flow-icon-2">2</div>
+                                <h4>AI生成</h4>
+                                <p>EVE的核心模型解释提示并生成3D网格。</p>
+                            </div>
+                            <div class="arrow-right hidden-md"></div>
+                            <!-- Step 3 -->
+                            <div class="flow-step">
+                                <div class="flow-icon flow-icon-3">3</div>
+                                <h4>优化与风格化</h4>
+                                <p>用户应用纹理并使用直观工具进行微调。</p>
+                            </div>
+                            <div class="arrow-right hidden-md"></div>
+                            <!-- Step 4 -->
+                            <div class="flow-step">
+                                <div class="flow-icon flow-icon-4">4</div>
+                                <h4>导出与使用</h4>
+                                <p>模型以标准格式 (gLTF, FBX, OBJ) 导出，适用于任何平台。</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4: Technology & Future Trends -->
+                <section class="section-industry">
+                    <h2 class="text-center mb-2">核心技术与未来趋势</h2>
+                    <p>成功取决于推进关键AI技术和预测市场变化。本节概述了当前的技术栈和未来的研发领域。</p>
+                    <div class="comp-user-grid">
+                        <div class="chart-box">
+                            <h3>核心技术采纳曲线</h3>
+                            <p>此图表显示了对EVE至关重要的AI技术的成熟度。虽然文本到图像已成熟，但高保真文本到3D仍是一个新兴领域，代表着竞争差异化的关键领域。</p>
+                            <div class="chart-container">
+                                <canvas id="techAdoptionChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <h3>战略研发重点领域</h3>
+                            <p>为了保持竞争优势，EVE的研发应优先考虑这些领域。提高模型连贯性和动画能力将为用户带来巨大价值。</p>
+                            <ul class="rd-focus-list">
+                                <li><span class="rd-focus-bullet bullet-1"></span>AI驱动的动画与骨骼绑定</li>
+                                <li><span class="rd-focus-bullet bullet-2"></span>增强模型连贯性与细节</li>
+                                <li><span class="rd-focus-bullet bullet-3"></span>实时协作创作</li>
+                                <li><span class="rd-focus-bullet bullet-4"></span>NeRF与高斯泼溅集成</li>
+                                <li><span class="rd-focus-bullet bullet-5"></span>平台内资产市场</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- 底部 -->
+            <footer class="industry-footer">
+                <p>为EVE产品团队实习生申请准备的分析报告。</p>
+                <p>2025年7月</p>
+            </footer>
+        </div>
+    </section>
+
+    <!-- 个人匹配度介绍版块 -->
+    <section id="self-match-introduction">
+        <div class="container">
+            <h2>个人匹配度介绍</h2>
+            <p>我深入理解3D AI情感交互与陪伴产品的市场潜力与技术挑战。我的专业背景和项目经验使我能积极投身于此领域。</p>
+            <p>我具备扎实的AI大模型技术基础，通过“Foundations-of-LLMs”项目，掌握了Prompt工程、PEFT、RAG等核心技术，为AI伴侣的智能优化奠定基础。在“二次元陪伴聊天机器人”项目中，我构建了面向2C端情感陪聊场景的完整工作流，并深入分析用户情感需求，通过迭代优化确保智能体提供稳定情感支持，展现了情感交互代理系统构建和用户情感洞察的实践能力。</p>
+            <p>我熟悉数据驱动的产品迭代逻辑，并在“合成生物学竞赛蛋白设计赛”中运用XGBoost回归模型进行精准预测，涉及数据清洗、预处理和特征工程，这使我能参与情感交互数据分类体系设计及奖励模型（RM）的构建与优化。</p>
+            <p>我高度关注用户情感体验，善于洞察用户行为背后的情感需求，并能初步区分不同情感互动场景，致力于打造更具共情力的产品。我坚信AI陪伴产品的社会价值，渴望投身于AI情感交互领域。同时，我也认识到该领域在数据隐私、情感操纵等方面的伦理挑战，并致力于推动负责任的AI开发。</p>
+            <p>我的综合能力与对AI情感交互领域的热忱，与贵公司在3D AI情感交互与情感强化学习方向的探索高度契合，期待能为EVE项目贡献力量。</p>
+        </div>
+    </section>
+
+    <!-- 联系我版块 -->
+    <section id="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> 邮箱: <a href="mailto:212144787@qq.com">212144787@qq.com</a></p>
+                <p><i class="fas fa-phone-alt"></i> 电话: 17362281906</p>
+                <!-- 您可以在这里添加其他社交媒体链接，例如GitHub或LinkedIn -->
+                <!-- <p><i class="fab fa-github"></i> GitHub: <a href="#" target="_blank">YourGitHub</a></p> -->
+                <!-- <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="#" target="_blank">YourLinkedIn</a></p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部版权信息 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 李嘉烁. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chart.js 库 -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart.js 配置和数据
+        const pinkPalette = {
+            primary: '#E91E63', /* dark-pink */
+            secondary: '#F8BBD0', /* primary-pink */
+            accent1: '#FCE4EC', /* light-pink */
+            neutralLight: '#BDBDBD', /* light-gray */
+            neutralLighter: '#F5F5F5', /* very light gray */
+            background: '#FFFFFF',
+            textColor: '#424242'
+        };
+
+        const chartTooltipTitleCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+        
+        function wrapLabels(label) {
+            const maxLen = 8; // 调整最大长度以适应中文，或根据需要调整
+            if (typeof label !== 'string' || label.length <= maxLen) {
+                return label;
+            }
+            const chars = label.split('');
+            const lines = [];
+            let currentLine = '';
+            chars.forEach(char => {
+                if ((currentLine + char).length > maxLen) {
+                    lines.push(currentLine);
+                    currentLine = char;
+                } else {
+                    currentLine += char;
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine);
+            }
+            return lines;
+        }
+
+        // 1. Market Growth Chart (Line Chart)
+        const marketGrowthCtx = document.getElementById('marketGrowthChart').getContext('2d');
+        new Chart(marketGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['2023', '2024', '2025', '2026', '2027', '2028'],
+                datasets: [{
+                    label: '市场规模 (十亿美元)',
+                    data: [15.2, 17.6, 25.0, 29.0, 33.5, 38.8],
+                    backgroundColor: 'rgba(233, 30, 99, 0.2)', /* dark-pink with transparency */
+                    borderColor: pinkPalette.primary,
+                    pointBackgroundColor: pinkPalette.primary,
+                    fill: true,
+                    tension: 0.4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value + 'B';
+                            }
+                        }
+                    }
+                },
+                plugins: chartTooltipTitleCallback.plugins
+            }
+        });
+
+        // 2. Competitor Radar Chart
+        const competitorRadarCtx = document.getElementById('competitorRadarChart').getContext('2d');
+        new Chart(competitorRadarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['易用性', ['AI原生', '功能'], '社区规模', '专业工具', '资产质量'],
+                datasets: [{
+                    label: 'EVE (目标)',
+                    data: [9, 10, 6, 4, 8],
+                    backgroundColor: 'rgba(233, 30, 99, 0.4)', /* dark-pink with transparency */
+                    borderColor: pinkPalette.primary,
+                    pointBackgroundColor: pinkPalette.primary
+                }, {
+                    label: '现有产品 (例如 Blender)',
+                    data: [3, 2, 9, 10, 10],
+                    backgroundColor: 'rgba(189, 189, 189, 0.4)', /* light-gray with transparency */
+                    borderColor: pinkPalette.neutralLight,
+                    pointBackgroundColor: pinkPalette.neutralLight
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                plugins: chartTooltipTitleCallback.plugins
+            }
+        });
+
+        // 3. User Segments Chart (Doughnut)
+        const userSegmentsCtx = document.getElementById('userSegmentsChart').getContext('2d');
+        new Chart(userSegmentsCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['独立游戏开发者', '社交媒体创作者', '营销机构', '虚拟主播/爱好者', '原型设计师'],
+                datasets: [{
+                    label: '目标用户细分',
+                    data: [35, 40, 10, 10, 5],
+                    backgroundColor: [
+                        pinkPalette.primary,
+                        pinkPalette.secondary,
+                        pinkPalette.accent1,
+                        pinkPalette.neutralLight,
+                        pinkPalette.neutralLighter
+                    ],
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: chartTooltipTitleCallback.plugins
+            }
+        });
+        
+        // 4. Tech Adoption Chart (Bar Chart)
+        const techAdoptionCtx = document.getElementById('techAdoptionChart').getContext('2d');
+        const originalLabels = ['文本到图像生成', '生成对抗网络', '高保真文本到3D', '神经辐射场 (NeRFs)', 'AI驱动的动画'];
+        const processedLabels = originalLabels.map(wrapLabels);
+
+        new Chart(techAdoptionCtx, {
+            type: 'bar',
+            data: {
+                labels: processedLabels,
+                datasets: [{
+                    label: '技术成熟度 (1-10)',
+                    data: [9, 8, 5, 6, 4],
+                    backgroundColor: [
+                        pinkPalette.primary,
+                        pinkPalette.secondary,
+                        pinkPalette.accent1,
+                        pinkPalette.neutralLight,
+                        pinkPalette.neutralLighter
+                    ],
+                    borderColor: [
+                        pinkPalette.primary,
+                        pinkPalette.secondary,
+                        pinkPalette.accent1,
+                        pinkPalette.neutralLight,
+                        pinkPalette.neutralLighter
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        suggestedMax: 10
+                    }
+                },
+                plugins: chartTooltipTitleCallback.plugins
+            }
+        });
+
+    </script>
+</body>
+</html>
